@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anita PEREIRA DOS SANTOS | E-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Barre de Navigation centrée -->
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">Mon parcours</a></li>
+                <li><a href="#universite">Mes projets à l'IUT</a></li>
+                <li><a href="#pro">Mon expérience de stage</a></li>
+                <li><a href="#passion">Mon intérêt pour le voyage</a></li>
+                <li><a href="#points-forts">Mes atouts professionnels</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-content">
+            <div class="profile-card">
+                <div class="profile-img-container">
+                    <img src="photo-anita.jpg" alt="Anita PEREIRA DOS SANTOS" class="profile-img">
+                </div>
+                <h2>ANITA PEREIRA DOS SANTOS</h2>
+                <p class="subtitle">Etudiante en troisième année de<br><span>BUT GEA : Parcours Gestion Comptable, Fiscale et Financière</span></p>
+                
+                <div class="contact-info">
+                    <a href="tel:0686752882"><i class="fas fa-phone"></i> 06 86 75 28 82</a>
+                    <a href="mailto:anita.pds36@gmail.com"><i class="fas fa-envelope"></i> anita.pds36@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/anita-pereira-dos-santos-423a21356" target="_blank"><i class="fab fa-linkedin"></i> Profil LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="hero-text">
+                <h1>E-PORTFOLIO</h1>
+                <p class="description">
+                    Bienvenue dans mon portfolio. Vous y découvrirez mon parcours, mes expériences universitaires et professionnelles ainsi que les compétences que j'ai développées au cours de ma formation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="mon-cv.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-download"></i> Mon CV</a>
+                    <a href="CV_Video_Anita PEREIRA_DOS_SANTOS.mp4" target="_blank" class="btn btn-secondary"><i class="fas fa-video"></i> Mon CV Vidéo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos / Frise Chronologique Horizontale (Ordre exact) -->
+    <section id="a-propos" class="about-section">
+        <h2 class="section-title">MON PARCOURS</h2>
+        
+        <div class="timeline-horizontal-wrapper">
+            <div class="timeline-horizontal">
+                <div class="timeline-line"></div>
+
+                <!-- 1. BAC Général (Haut) -->
+                <div class="timeline-item top item-1" onclick="openModal('Bac Général', 'Mon parcours a débuté par un baccalauréat général avec les spécialités Mathématiques et Sciences Economiques et Sociales (SES). Je n\'avais pas encore défini précisément mon projet professionnel, mais mon intérêt pour les chiffres et l\'économie m\'a naturellement orientée vers ces matières.')">
+                    <div class="timeline-card">
+                        <h3>BAC Général</h3>
+                        <p>Spécialités Mathématiques et SES</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- 2. BUT GEA (Bas) -->
+                <div class="timeline-item bottom item-2" onclick="openModal('BUT GEA', 'Après le baccalauréat, j\'ai souhaité m\'orienter vers une formation plus concrète, qui me permettrait de mettre en pratique mes connaissances et de découvrir le monde professionnel. Le BUT GEA m\'a attirée par sa diversité d\'enseignements, ses périodes de stage et la possibilité de suivre la formation en alternance. Il me permettait également de découvrir différents domaines de la gestion avant de choisir ma spécialisation.')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <h3>BUT GEA</h3>
+                        <p>Gestion des Entreprises et des Administrations</p>
+                    </div>
+                </div>
+
+                <!-- 3. GC2F (Haut) -->
+                <div class="timeline-item top item-3" onclick="openModal('Spécialisation GC2F', 'Au cours de ma formation, j\'ai choisi le parcours GC2F, dans lequel j\'ai retrouvé mon intérêt pour les chiffres, l\'analyse et la précision. J\'ai notamment découvert comment les données comptables et financières permettent de comprendre la situation d\'une organisation et d\'éclairer ses décisions.')">
+                    <div class="timeline-card">
+                        <h3>Spécialisé en GC2F</h3>
+                        <p>Gestion Comptable, Fiscale et Financière</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- 4. Créa Campus (Bas) -->
+                <div class="timeline-item bottom item-4" onclick="openModal('Projet Créa Campus : L\'accès à la culture pour tous', '<br>Ayant grandi en zone rurale, j\'ai pu observer les inégalités d\'accès aux activités culturelles liées à l\'éloignement géographique. Avec mon groupe, nous avons imaginé un espace culturel mobile proposant des expositions et des projections immersives.Ce projet m\'a permis de participer à la construction d\'une idée entrepreneuriale, de son étude de marché à son modèle financier.<br><br><a href=\'#universite\' class=\'modal-link-btn\' onclick=\'closeModal()\'>En savoir plus <i class=\'fas fa-arrow-right\'></i></a>')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <h3>Créa Campus</h3>
+                        <p>Projet "Les voies de la culture"</p>
+                    </div>
+                </div>
+
+                <!-- 5. Stage (Haut) -->
+                <div class="timeline-item top item-5" onclick="openModal('Mon stage à Châteauroux Métropole', '<strong>Service Production Comptable Intégrée et Grands Projets </strong><br><br>D\'Avril à juin 2026, j\'ai effectué un stage au sein du service finances de Châteauroux Métropole. J\'ai découvert le fonctionnement de la comptabilité publique territoriale et participé au suivi des dépenses de la collectivité. Cette expérience m\'a permis de mettre en pratique les connaissances acquises en formation dans un environnement professionnel. <br><br><a href=\'#pro\' class=\'modal-link-btn\' onclick=\'closeModal()\'>En savoir plus <i class=\'fas fa-arrow-right\'></i></a>')">
+                    <div class="timeline-card">
+                        <h3>Stage en gestion financière</h3>
+                        <p>Châteauroux Métropole (2026)</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- 6. BUT GEA 3 (Bas) -->
+                <div class="timeline-item bottom item-6" onclick="openModal('BUT GEA 3ème année', 'Cette troisième année me permet de consolider mes connaissances et d\'approfondir mes compétences à travers de nouveaux projets et des mises en situation professionnelles. Je prépare également la suite de mon parcours, avec l\'objectif d\'intégrer le monde professionnel après l\'obtention de mon diplôme, dans les domaines de la comptabilité, de la finance ou de la gestion.')">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <h3>BUT GEA 3</h3>
+                        <p>Validation des acquis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Section Réalisations Universitaires -->
+    <section id="universite" class="uni-section">
+        
+        <div class="uni-card">
+            <div class="uni-header">
+                <div>
+                    <h3>Projet Créa Campus : L'accès à la culture pour tous</h3>
+                    <p class="uni-subtitle">Projet entrepreneurial collectif en lien avec Pépite — SAÉ BUT GEA 2</p>
+                </div>
+                <div class="uni-header-right">
+                    <span class="badge-uni">Projets et entrepreneuriat</span>
+                    <img src="E-portfolio_1_-removebg-preview.png" alt="Logo Les Voies de la Culture" class="crea-logo">
+                </div>
+            </div>
+
+            <p class="uni-description">
+                <em>Contexte :</em> Ayant grandi en zone rurale, j'ai constaté les inégalités d'accès à la culture. Avec mon groupe, nous avons imaginé un camion culturel mobile proposant des expositions et des projections immersives à une quinzaine de personnes par session.
+                <em><br>L'objectif était de rapprocher la culture des habitants des territoires ruraux et de leur proposer une offre culturelle accessible.</br></em>
+            </p>
+
+            <div class="uni-grid">
+                <div class="info-box">
+                    <h4><i class="fas fa-chart-pie"></i> Étude et conception du projet</h4>
+                    <ul>
+                        <li><strong>Étude de marché :</strong> Réalisation d'une analyse PESTEL, conception de questionnaires et analyse de la concurrence.</li>
+                        <li><strong>Définition de l'offre :</strong> Participation à la conception du concept et à la réflexion sur son fonctionnement.</li>
+                        <li><strong>Stratégie marketing :</strong> Contribution à la création du logo et à la définition de la stratégie tarifaire.</li>
+                        <li><strong>Cadre juridique :</strong> Recherche sur les obligations réglementaires et les choix de statut juridique du projet.</li>
+                        <li><strong>Modèle financier :</strong> Participation à la construction des prévisions financières sur trois ans.</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4><i class="fas fa-search-location"></i>Résultats obtenus</h4>
+                    <ul>
+                        </strong><p style="text-align: justify;"> Ce travail collectif a abouti à la construction d'un projet entrepreneurial structuré, intégrant une étude de marché, une stratégie commerciale, un cadre réglementaire et un modèle financier prévisionnel. Mes recherches ont notamment contribué à préciser le positionnement du projet et à mieux comprendre son environnement.</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+       <!-- Section Compétences Développées -->
+        <div class="skills-developed-container">
+            <h3 class="skills-main-title">COMPÉTENCES DÉVELOPPÉES</h3>
+            
+            <div class="skills-columns-grid three-columns">
+                <!-- Carte Savoirs -->
+                <div class="skills-column clickable-column" onclick="openModal('SAVOIRS', '<div class=\'modal-item\'><i class=\'fas fa-globe modal-icon\'></i><span>Comprendre les enjeux sociaux et territoriaux liés à l\'accès à la culture.</span></div><div class=\'modal-item\'><i class=\'fas fa-lightbulb modal-icon\'></i><span>Identifier les différentes étapes de construction d\'un projet entrepreneurial.</span></div><div class=\'modal-item\'><i class=\'fas fa-chart-line modal-icon\'></i><span>Comprendre les objectifs d\'une étude de marché et d\'une analyse concurrentielle.</span></div>')">
+                    <div class="skills-column-header">
+                        <i class="fas fa-book column-icon"></i>
+                        <h4>SAVOIRS</h4>
+                        <p class="click-hint"></i> </p>
+                    </div>
+                </div>
+
+                <!-- Carte Savoir-faire -->
+                <div class="skills-column clickable-column" onclick="openModal('SAVOIR-FAIRE', '<div class=\'modal-item\'><i class=\'fas fa-search modal-icon\'></i><span>Rechercher, sélectionner et exploiter des informations fiables.</span></div><div class=\'modal-item\'><i class=\'fas fa-file-alt modal-icon\'></i><span>Concevoir des questionnaires et analyser les réponses obtenues.</span></div><div class=\'modal-item\'><i class=\'fas fa-balance-scale modal-icon\'></i><span>Étudier la concurrence et comparer différentes offres.</span></div><div class=\'modal-item\'><i class=\'fas fa-calculator modal-icon\'></i><span>Participer à l\'élaboration d\'un modèle financier prévisionnel.</span></div>')">
+                    <div class="skills-column-header">
+                        <i class="fas fa-briefcase column-icon"></i>
+                        <h4>SAVOIR-FAIRE</h4>
+                        <p class="click-hint"></i> </p>
+                    </div>
+                </div>
+
+                <!-- Carte Savoir-être -->
+                <div class="skills-column clickable-column" onclick="openModal('SAVOIR-ÊTRE', '<div class=\'modal-item\'><i class=\'fas fa-check-double modal-icon\'></i><span>Faire preuve de rigueur et d\'organisation dans la réalisation des travaux.</span></div><div class=\'modal-item\'><i class=\'fas fa-comments modal-icon\'></i><span>Être à l\'écoute et prendre en compte différents points de vue.</span></div><div class=\'modal-item\'><i class=\'fas fa-users modal-icon\'></i><span>Coopérer et s\'adapter au travail en équipe.</span></div>')">
+                    <div class="skills-column-header">
+                        <i class="fas fa-user column-icon"></i>
+                        <h4>SAVOIR-ÊTRE</h4>
+                        <p class="click-hint"></i> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section Mon Bilan Personnel -->
+            <div class="personal-assessment-box">
+                <h3 class="assessment-title">MON BILAN PERSONNEL</h3>
+                
+                <div class="assessment-section">
+                    <h4>Mes réussites</h4>
+                    <p style="text-align: justify;">Je suis parvenue à m'impliquer dans les différentes étapes de construction du projet, de l'étude de marché à l'élaboration du modèle financier prévisionnel sur trois ans. J'ai notamment contribué aux recherches documentaires, à l'analyse de la concurrence, à la réflexion autour de l'offre et à l'étude de ses aspects commerciaux, juridiques et financiers. Cette diversité de missions m'a permis d'avoir une vision plus globale de la création d'un projet entrepreneurial et de mobiliser différentes connaissances acquises au cours de ma formation.</p>
+                </div>
+
+                <div class="assessment-section">
+                    <h4>Mes pistes d'amélioration</h4>
+                    <p>J'ai parfois rencontré des difficultés à gérer les différences de rythme au sein du groupe et à défendre mes idées. Cette expérience m'a appris à mieux communiquer et à prendre davantage ma place dans le travail collectif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réalisations Professionnelles -->
+    <section id="pro" class="pro-section">
+        
+        <div class="pro-card">
+            <div class="pro-header">
+            <div>
+                <h3>Mon stage au service finances de Châteauroux Métropole</h3>
+                <p class="pro-subtitle">Service Production Comptable Intégrée et Grands Projets — Avril à Juin 2026</p>
+            </div>
+            <div class="pro-header-right">
+                <span class="badge-pro">Comptabilité Publique</span>
+                <img src="E-portfolio_2_-removebg-preview.png" alt="Logo Châteauroux Métropole" class="pro-logo">
+            </div>
+        </div>
+
+          <div class="pro-grid">
+            <!-- Colonne de Gauche : Objectif + Logiciels -->
+            <div class="pro-col-left">
+                <!-- Objectif -->
+                <div class="info-box">
+                    <h4><i class="fas fa-bullseye"></i> Objectif</h4>
+                    <p>Participer au suivi et au traitement des dépenses de la collectivité, en appui aux agents du service finances.</p>
+                </div>
+
+                <!-- Logiciels utilisés (Directement sous Objectif) -->
+                <!-- Boîte scindée : Logiciels + Compétences mobilisées -->
+                <div class="software-skills-box">
+                    <!-- Colonne Gauche : Logiciels -->
+                    <!-- Colonne Gauche : Logiciels -->
+                    <div class="software-side">
+                        <h4><i class="fas fa-desktop"></i> Logiciels métiers :</h4>
+                        <div class="software-items">
+                            <div class="software-card">
+                                <div class="software-card-header">
+                                    <img src="image-removebg-preview.png" alt="Logo Berger Levrault" class="software-logo">
+                                    
+                                </div>
+                                <p class="software-desc">Sedit: Gestion comptable et budgétaire des dépenses</p>
+                            </div>
+
+                            <div class="software-card">
+                                <div class="software-card-header">
+                                    <img src="Capture_d_écran_2026-10-29_163236-removebg-preview.png" alt="Logo iXBus" class="software-logo">
+                                    
+                                </div>
+                                <p class="software-desc">Suivi du circuit de validation et de la signature électronique</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne Droite : Compétences mobilisées -->
+                    <div class="skills-side">
+                        <h4><i class="fas fa-brain"></i> Compétences mobilisées :</h4>
+                        <ul class="pro-skills-list">
+                            <li><strong>Rigueur</strong> : Contrôler la conformité des pièces justificatives et la fiabilité des informations saisies.</li>
+                            <li><strong>Organisation</strong> : Assurer le suivi des dossiers et respecter les différentes étapes de traitement.</li>
+                            <li><strong>Autonomie</strong> : Prendre en charge certaines opérations courantes et solliciter les agents en cas de difficulté.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne de Droite : Mes Missions -->
+            <div class="info-box pro-col-right">
+                <h4><i class="fas fa-tasks"></i> Mes Missions</h4>
+                <ul>
+                    <li><strong>Gestion des tiers :</strong> Création et mise à jour des tiers (fournisseurs, bénéficiaires) dans la base comptable avec contrôle rigoureux des pièces justificatives (RIB, identité).</li>
+                    <li><strong>Engagements comptables :</strong> Saisie des engagements comptables et création des bons de commande pour divers services (voirie, espaces verts, magasin, garage).</li>
+                    <li><strong>Rapprochement des factures :</strong> Rapprochement entre factures et bons de commande, puis préparation au pré-mandatement.</li>
+                    <li><strong>Suivi des subventions :</strong> Suivi administratif des dossiers de subventions (aides à l'habitat, vélos à assistance électrique) et relances pour pièces manquantes.</li>
+                </ul>
+            </div>
+
+            <!-- Deuxième ligne de la grille -->
+            <!-- Ce que j'ai appris -->
+            <div class="info-box">
+                <h4><i class="fas fa-graduation-cap"></i> Ce que j'ai appris</h4>
+                <ul>
+                    <li>Comprendre le fonctionnement de la comptabilité publique et des contraintes budgétaires d'une collectivité.</li>
+                    <li>Identifier les différentes des étapes du cycle de la dépense (engagement, liquidation, mandatement).</li>
+                </ul>
+            </div>
+
+            <!-- Difficultés rencontrées -->
+            <div class="info-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Difficultés rencontrées</h4>
+                <ul>
+                    <li><strong>Identification des imputations budgétaires :</strong> Difficulté à déterminer certaines imputations (nature, fonction, opération) lors de la création des bons de commande lorsque les informations transmises étaient incomplètes.</li>
+                    <li><strong>Traitement des discordances :</strong> Traitement des écarts administratifs (par exemple : différences entre nom d'usage sur un RIB et nom de naissance sur une décision d'aide).</li>
+                </ul>
+            </div>
+        </div>
+
+          <!-- Bilan -->
+            <div class="info-box">
+                <h4><i class="fas fa-tasks"></i> Bilan</h4>
+                <ul>
+                    </strong> Ce stage m'a permis de mieux comprendre le rôle du service finances dans le fonctionnement d'une collectivité. J'ai apprécié la diversité des missions et le fait de pouvoir participer concrètement au traitement des dépenses. Cette expérience m'a également permis de découvrir les exigences du travail en comptabilité publique et de confirmer mon intérêt pour les domaines de la comptabilité et de la gestion financière.</li>
+                </ul>
+            </div>
+        </div>
+
+            <!-- Section Ma Passion -->
+    <section id="passion" class="passion-section">
+        
+        
+        <div class="passion-card">
+            <h2 class="section-title">Voyager : anticiper, organiser, découvrir </h2>
+            <div class="passion-intro">
+                <p>
+                    <i class="fas fa-plane-departure quote-icon"></i>
+                    Voyager, c'est aussi planifier : j'aime concevoir des itinéraires en conciliant temps, distances et budget, afin de profiter pleinement de chaque séjour.
+                </p>
+            </div>
+
+            <div class="passion-grid">
+                <div class="passion-box">
+                    <h4><i class="fas fa-calendar-alt"></i> Construire un itinéraire</h4>
+                    <p>Organiser les visites et les déplacements pour créer un programme cohérent et adapté à la durée du séjour.</p>
+                </div>
+
+                <div class="passion-box">
+                    <h4><i class="fas fa-search"></i> Se renseigner avant de partir</h4>
+                    <p>Vérifier les horaires, les tarifs et les conditions d'accès pour anticiper les contraintes.</p>
+                </div>
+
+                <div class="passion-box">
+                    <h4><i class="fas fa-clock"></i> Optimiser son temps</h4>
+                    <p>Estimer les durées de visite et de trajet pour organiser les journées sans surcharger le programme.</p>
+                </div>
+
+                <div class="passion-box">
+                    <h4><i class="fas fa-calculator"></i> Maîtriser les dépenses</h4>
+                    <p>Comparer les coûts des transports et des activités pour respecter le budget prévu.</p>
+                </div>
+            </div>
+
+            <div class="passion-conclusion">
+                <div class="conclusion-text">
+                    <p>Au-delà de la préparation, les voyages nourrissent ma curiosité et mon envie de découvrir de nouveaux lieux et modes de vie. Ils me permettent de sortir de mes habitudes, de m'ouvrir à d'autres cultures et d'élargir ma vision du monde.</p>
+                </div>
+
+                <!-- Image du panneau d'indication -->
+                <div class="signpost-image-container">
+                    <img src="Gemini_Generated_Image_s11zj8s11zj8s11z-removebg-preview.png" alt="Panneau d'indication des destinations" class="signpost-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+           
+
+           
+
+           
+
+
+    <!-- Section Points Forts / Marguerite Interactive -->
+    <section id="points-forts" class="skills-section">
+       
+
+        <div class="flower-container">
+            <div class="flower-center">
+                <span>Mes atouts<br>professionnels</span>
+            </div>
+
+            <!-- Pétale 1 (Haut) -->
+            <div class="petal p1" onclick="openModal('Planifier et organiser une activité', 'Je sais organiser les différentes étapes d\'un travail, hiérarchiser les priorités et respecter les délais en tenant compte des contraintes.')">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Planifier et organiser une activité</span>
+            </div>
+
+            <!-- Pétale 2 (Haut Droite) -->
+            <div class="petal p2" onclick="openModal('Assurer le suivi comptable et budgétaire', 'Ma formation et mes expériences m\'ont permis de participer au suivi des dépenses, au traitement de documents comptables et à l\'application des procédures budgétaires.')">
+                <i class="fas fa-chart-line"></i>
+                <span>Assurer le suivi comptable et budgétaire</span>
+            </div>
+
+            <!-- Pétale 3 (Bas Droite) -->
+            <div class="petal p3" onclick="openModal('Rechercher et analyser des informations', 'Je sais rechercher des informations pertinentes, les comparer et les synthétiser afin de mieux comprendre une situation et de contribuer à la prise de décision.')">
+                <i class="fas fa-search"></i>
+                <span>Rechercher et analyser des informations</span>
+            </div>
+
+            <!-- Pétale 4 (Bas) -->
+            <div class="petal p4" onclick="openModal('Être à l\'écoute et communiquer', 'Je prends en compte les besoins et les avis de mes interlocuteurs pour comprendre leurs attentes et adapter mes échanges.')">
+                <i class="fas fa-users"></i>
+                <span>Être à l'écoute et communiquer</span>
+            </div>
+
+            <!-- Pétale 5 (Bas Gauche) -->
+            <div class="petal p5" onclick="openModal('Faire preuve de rigueur et d\'organisation', 'J\'accorde de l\'importance à la fiabilité des informations, au respect des consignes et à la précision du travail réalisé.')">
+                <i class="fas fa-tasks"></i>
+                <span>Faire preuve de rigueur</span>
+            </div>
+
+            <!-- Pétale 6 (Haut Gauche) -->
+            <div class="petal p6" onclick="openModal('Apprendre et progresser', 'Je sais prendre du recul sur mes expériences, identifier mes points forts et chercher à améliorer ma manière de travailler.')">
+                <i class="fas fa-brain"></i>
+                <span>Apprendre et progresser</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fenêtre Modale pour les textes au clic -->
+    <div id="textModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color: var(--primary-color); margin-bottom: 1rem;"></h2>
+            <div id="modalBody" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-color);"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, htmlText) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalBody').innerHTML = htmlText;
+            document.getElementById('textModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('textModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('textModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

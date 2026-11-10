@@ -1,0 +1,1225 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #1e293b;
+    --accent-color: #0284c7;
+    --text-color: #334155;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --border-color: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar centrée */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Section Accueil / Hero */
+.hero-section {
+    padding: 4rem 8%;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.profile-img-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent-color);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle span {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    text-align: left;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.2rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.contact-info i {
+    color: var(--accent-color);
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: #000000;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+/* Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+/* Section À Propos / Frise Horizontale (Ordre 1 à 6) */
+.about-section {
+    padding: 5rem 8%;
+    background-color: var(--white);
+}
+
+.timeline-horizontal-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 4rem 0;
+}
+
+.timeline-horizontal {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 900px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--accent-color);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 140px;
+}
+
+.timeline-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    width: 160px;
+}
+
+.timeline-card:hover {
+    transform: scale(1.05);
+}
+
+.timeline-card h3 {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-card p {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.timeline-dot {
+    width: 18px;
+    height: 18px;
+    background-color: var(--white);
+    border: 4px solid var(--accent-color);
+    border-radius: 50%;
+    margin: 15px 0;
+}
+
+.timeline-item.top {
+    margin-bottom: 90px;
+}
+
+.timeline-item.bottom {
+    margin-top: 90px;
+}
+
+.item-1 { order: 1; } /* Bac Général */
+.item-2 { order: 2; } /* BUT GEA */
+.item-3 { order: 3; } /* GC2F */
+.item-4 { order: 4; } /* Créa Campus */
+.item-5 { order: 5; } /* Stage */
+.item-6 { order: 6; } /* GEA 3 */
+
+/* Section Ma Passion */
+.passion-section {
+    padding: 5rem 8%;
+    background-color: var(--bg-light);
+}
+
+.passion-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.passion-intro {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    background-color: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.quote-icon {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.passion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.passion-box {
+    background-color: #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.passion-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.passion-box h4 i {
+    color: var(--accent-color);
+}
+
+.passion-conclusion {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+/* Image du panneau */
+.signpost-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signpost-img {
+    max-width: 220px;
+    height: auto;
+}
+
+/* Section Réalisations Universitaires */
+.uni-section {
+    padding: 5rem 8%;
+    background-color: var(--white);
+}
+
+.uni-card {
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.uni-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.uni-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.uni-subtitle {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+.badge-uni {
+    background-color: #fef3c7;
+    color: #b45309;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.uni-description {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    background: var(--white);
+    padding: 1.2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.uni-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.skills-acquired-box {
+    background-color: var(--white);
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.skills-acquired-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+/* Section Réalisations Professionnelles */
+.pro-section {
+    padding: 5rem 8%;
+    background-color: var(--bg-light);
+}
+
+.pro-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.pro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pro-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.pro-subtitle {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+.badge-pro {
+    background-color: #e0f2fe;
+    color: var(--accent-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.pro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-box {
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.info-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-box h4 i {
+    color: var(--accent-color);
+}
+
+.info-box ul {
+    padding-left: 1.2rem;
+}
+
+.info-box li {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.software-box {
+    background-color: #f1f5f9;
+    padding: 1.2rem;
+    border-radius: 12px;
+}
+
+.software-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+/* Section Points Forts / Marguerite Interactive */
+.skills-section {
+    padding: 5rem 8%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flower-container {
+    position: relative;
+    width: 480px;
+    height: 480px;
+    margin: 2rem auto;
+}
+
+.flower-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    background: #fff;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.petal {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.petal:hover {
+    transform: scale(1.1);
+    z-index: 8;
+}
+
+.petal i {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: var(--primary-color);
+}
+
+.petal span {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+
+.p1 { top: 0; left: 160px; background-color: #fbcfe8; }
+.p2 { top: 75px; right: 20px; background-color: #fed7aa; }
+.p3 { bottom: 75px; right: 20px; background-color: #fef08a; }
+.p4 { bottom: 0; left: 160px; background-color: #bbf7d0; }
+.p5 { bottom: 75px; left: 20px; background-color: #bae6fd; }
+.p6 { top: 75px; left: 20px; background-color: #ddd6fe; }
+
+/* Modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.modal-link-btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.modal-link-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.pro-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Alignement du logo Créa Campus */
+.uni-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.crea-logo {
+    height:120px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Bouton Secondaire (Mon CV Vidéo) */
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color); /* Contour bien visible */
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Alignement des 2 boutons côte à côte */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Alignement du logo Châteauroux Métropole */
+.pro-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.pro-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Adaptation Responsive pour Écrans Mobiles */
+/* ==========================================
+   ADAPTATION MOBILE SUR-MESURE (≤ 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Navigation */
+    .navbar nav ul {
+        flex-wrap: wrap;
+        gap: 0.6rem 1rem;
+        justify-content: center;
+    }
+    
+    .navbar nav a {
+        font-size: 0.85rem;
+    }
+
+    /* 2. Hero / Accueil */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* 3. Frise Chronologique : Passages en VERTICAL pour mobile */
+    .timeline-horizontal-wrapper {
+        overflow-x: visible;
+        padding: 1rem 0;
+    }
+
+    .timeline-horizontal {
+        flex-direction: column;
+        min-width: 100%;
+        padding: 0;
+        gap: 1.5rem;
+    }
+
+    .timeline-line {
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        width: 4px;
+        height: 100%;
+        transform: none;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        gap: 1.2rem;
+        margin: 0 !important;
+    }
+
+    .timeline-item.top, 
+    .timeline-item.bottom {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .timeline-dot {
+        margin: 0;
+        flex-shrink: 0;
+        position: relative;
+        left: 11px;
+        z-index: 3;
+    }
+
+    .timeline-card {
+        width: calc(100% - 50px);
+        text-align: left;
+    }
+
+    /* Ordre naturel chronologique sur mobile */
+    .item-1 { order: 1; }
+    .item-2 { order: 2; }
+    .item-3 { order: 3; }
+    .item-4 { order: 4; }
+    .item-5 { order: 5; }
+    .item-6 { order: 6; }
+
+    /* 4. Passion & Image du panneau */
+    .passion-card {
+        padding: 1.5rem;
+    }
+
+    .passion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .passion-conclusion {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .signpost-img {
+        max-width: 180px;
+    }
+
+    /* 5. Réalisations Universitaires & Pro */
+    .uni-card, .pro-card {
+        padding: 1.5rem;
+    }
+
+    .uni-grid, .pro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .uni-header, .pro-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .uni-header-right, .pro-header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* 6. Marguerite des Points Forts : Grille responsive propre sur mobile */
+    .flower-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .flower-center {
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    .petal {
+        position: relative;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 1rem 1.2rem;
+        text-align: left;
+    }
+
+    .petal i {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+
+    .petal span {
+        font-size: 0.95rem;
+    }
+}
+
+/* Section Compétences Développées (Style Sombre Pro) */
+/* Section Compétences Développées (Fond Blanc) */
+.skills-developed-container {
+    background-color: var(--white);
+    color: var(--text-color);
+    padding: 2.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.skills-main-title {
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.skills-columns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+/* Grille à 3 colonnes pour la section Compétences Développées */
+.skills-columns-grid.three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Style des boutons de compétences */
+.skills-buttons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.skill-btn {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.skill-btn i {
+    color: var(--accent-color);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.skill-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+}
+
+.skill-btn:hover i {
+    color: var(--white);
+}
+
+/* Responsive Mobile (3 colonnes -> 1 colonne) */
+@media (max-width: 768px) {
+    .skills-columns-grid.three-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+.skills-column-header {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.column-icon {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.skills-column-header h4 {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+
+.skills-column-header p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.skills-list li i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .skills-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Boîte scindée en 2 colonnes dans Réalisations Pro */
+.software-skills-box {
+    background-color: #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.software-side h4, 
+.skills-side h4 {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.software-side h4 i, 
+.skills-side h4 i {
+    color: var(--accent-color);
+}
+
+.software-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.software-card {
+    background: var(--white);
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le logo et le texte horizontalement */
+    text-align: center;  /* Centre le texte descriptif */
+    gap: 0.8rem;
+}
+
+.software-logo {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto; /* Assure le centrage parfait de l'image */
+}
+
+.software-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.software-card-header strong {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+.software-logo {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+   
+}
+
+.software-desc {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.software-logo {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+   
+}
+
+.pro-skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.pro-skills-list li {
+    background: var(--white);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 0.88rem;
+    color: var(--text-color);
+}
+
+.pro-skills-list strong {
+    color: var(--primary-color);
+}
+
+/* Adaptation pour mobile */
+@media (max-width: 768px) {
+    .software-skills-box {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Bloc Mon Bilan Personnel */
+.personal-assessment-box {
+    background-color: var(--white);
+    color: var(--text-color);
+    padding: 2rem 2.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.assessment-title {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.assessment-section {
+    margin-bottom: 1.2rem;
+}
+
+.assessment-section:last-child {
+    margin-bottom: 0;
+}
+
+.assessment-section h4 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.assessment-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Style des 3 cartes cliquables Savoirs / Savoir-faire / Savoir-être */
+.clickable-column {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.clickable-column:hover {
+    transform: translateY(-5px);    
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.15);
+    border-color: var(--accent-color);
+}
+
+.clickable-column .skills-column-header {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.click-hint {
+    margin-top: 0.8rem;
+    font-size: 0.82rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Alignement strict des icônes dans la modale */
+.modal-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.modal-item:last-child {
+    margin-bottom: 0;
+}
+
+.modal-icon {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.modal-item span {
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
